@@ -6,4 +6,4 @@ The running entry file is script/large_finetune.sh
 
 By now, the general idea of KERM can be glanced, if interested.
 
-The completed codes and detailed running instruction of KERM will be updated within this month.
+The completed codes and detailed running instruction of KERM will be updated within this month..
