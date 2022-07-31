@@ -28,7 +28,6 @@ qrels=data/${dataset}/qrels.tsv
 query=data/${dataset}/train.query.txt
 resource='data/concept.txt'
 cpnet='data/conceptnet.en.pruned.graph'
-pattern_path='data/matcher_patterns.json'
 word2vec='data/GoogleNews-vectors-negative300.bin.gz'
 ent_emb='data/glove.transe.sgd.ent.npy'
 rel_emb='data/glove.transe.sgd.rel.npy'

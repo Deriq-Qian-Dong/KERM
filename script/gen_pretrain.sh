@@ -1,29 +1,14 @@
 #!/bin/bash
-model_name=$1
-queue=$2
-model_size=$3
-partial_no=$4
+model_name=genpretrain
+model_size=$1
+partial_no=$2
 sample_num=20
-if [[ ${queue} =~ "v100" ]]; then
-    batch_size=6
-fi 
-if [[ ${queue} =~ "p40" ]]; then
-    batch_size=6
-fi 
-if [[ ${queue} =~ "a100" ]]; then
-    batch_size=`expr 80 / $sample_num`
-fi 
+batch_size=`expr 80 / $sample_num`
 if [[ ${model_size} =~ "base" ]]; then
     batch_size=`expr $batch_size \* 2`
 fi 
 echo "batch size ${batch_size}"
 dev_batch_size=64
-top1000='data/train.qidpid.gz'  #训练数据
-# top1000='data/treccar/train.qidpid.tsv'
-# top1000='data/RocketQAv2/data_train/marco_joint.rand128+aug128'
-# dev_input_file='data/dev.bm25.gz'  #测试数据
-# dev_input_file='data/dev.top1000.bm25_tuned.csv'
-dev_input_file='data/dev.top1000.bm25_tuned.csv'
 warmup_proportion=0.2
 eval_step_proportion=0.1
 report_step=10
@@ -49,19 +34,6 @@ output_dir=output
 log_dir=${output_dir}/log
 mkdir -p ${output_dir}
 mkdir -p ${log_dir}
-rm -rf /etc/pip.conf
-cp pip.conf /etc/pip.conf
-pip install networkx
-pip install data/networkx-2.6.3-py3-none-any.whl
-pip install pgl
-pip install data/pgl-2.1.5-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-pip install spacy
-pip install data/spacy-3.2.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-pip install nltk
-pip install gensim
-pip install data/gensim-4.1.2-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
-python -m spacy download en_core_web_sm
-pip install data/en_core_web_sm-3.2.0-py3-none-any.whl
 echo "=================start train ${OMPI_COMM_WORLD_RANK:-0}=================="
 python -m paddle.distributed.launch \
     --log_dir ${log_dir} \
@@ -92,13 +64,9 @@ python -m paddle.distributed.launch \
     --rel_emb=${rel_emb} \
     --max_seq_len=${max_seq_len} \
     --partial_no=${partial_no} \
-    --model=ErnieWithGNNv2
+    --model=ErnieWithGNNv2 \
+    --generate_type=pretrain
 echo "=================done train ${OMPI_COMM_WORLD_RANK:-0}=================="
 # upload
-echo "Starting uploading file to HDFS"
-tar -zcvf /root/paddlejob/workspace/env_run/output.tar.gz gen_data/
-${hdfs_cmd} -mkdir /user/sasd-adv/diaoyan/user/modelzoo/${model_name}
-${hdfs_cmd} -put  /root/paddlejob/workspace/env_run/output.tar.gz /user/sasd-adv/diaoyan/user/modelzoo/${model_name}/
-${hdfs_cmd} -put  /root/paddlejob/workspace/env_run/ernie /user/sasd-adv/diaoyan/user/modelzoo/${model_name}/
-${hdfs_cmd} -put  /root/paddlejob/workspace/env_run/script /user/sasd-adv/diaoyan/user/modelzoo/${model_name}/
-echo "Done uploading file to HDFS"
+tar -zcvf pretrain.${partial_no}.tar.gz gen_data/
+mv pretrain.${partial_no}.tar.gz data/marco/pretrain
