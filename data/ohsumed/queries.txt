@@ -1,0 +1,63 @@
+0 	Are there adverse effects on lipids when progesterone is given with estrogen replacement therapy
+1 	pathophysiology and treatment of disseminated intravascular coagulation
+2 	anticardiolipin and lupus anticoagulants, pathophysiology, epidemiology, complications
+3 	effectiveness of etidronate in treating hypercalcemia of malignancy
+4 	does estrogen replacement therapy cause breast cancer
+5 	t-cell lymphoma associated with autoimmune symptoms
+6 	lactase deficiency therapy options
+7 	pancytopenia in aids, workup and etiology
+8 	Rh isoimmunization, review topics
+9 	endocarditis, duration of antimicrobial therapy
+10	chemotherapy advanced for advanced metastatic breast cancer
+11	isolated hypoaldosteronism, syndromes where hypoaldosteronism and hypokalemia occur concurrently
+12	sickle cell disease, treatment  advice
+13	thrombocytopenia in pregnancy, etiology and management
+14	chronic pain management, review article, use of tricyclic antidepressants
+15	carotid endarterectomy, when to perform
+16	review article on adult respiratory syndrome
+17	RISK FACTORS and TREATMENT for HEPATOCELLULAR CARCINOMA
+18	FIBROMYALGIA/FIBROSITIS, DIAGNOSIS AND TREATMENT
+19	DIABETIC GASTROPARESIS, TREATMENT
+20	back pain, information on diagnosis and treatment
+21	can radiation therapy cause a delayed pericardial effusion?
+22	occult blood screening, need for routine screening
+23	urinary retention, differential diagnosis
+24	which peripheral neuropathies have associated edema
+25	isolated systolic hypertension, shep study
+26	differential diagnosis of U waves
+27	indications for and success of pericardial windows and pericardectomies
+28	lupus nephritis, diagnosis and management
+29	angiotensin converting enzyme inhibitors, review article
+30	course of anticoagulation with coumadin
+31	cerebral edema secondary to infection, diagnosis and treatment
+32	diagnostic and therapeutic work up of breast mass
+33	hepatobiliary lesions associated with neurofibromatosis
+34	evaluation for complications and management of bulimia
+35	treatment of migraine headaches with beta blockers and calcium channel blockers
+36	prevention, risk factors, pathophysiology of hypothermia
+37	chronic inflammatory demyelinating polyneuropathy, differential diagnosis and criteria
+38	outpatient management of diabetes, standard management of diabetics and any new management techniques
+39	diverticulitis, differential diagnosis and management
+40	cystic fibrosis and renal failure, effect of long term repeated use of aminoglycosides
+41	thyrotoxicosis, diagnosis and management
+42	neuroleptic malignant syndrome, differential diagnosis, treatment
+43	carcinoid tumors of the liver and pancreas, research, treatments
+44	radiation induced thyroiditis, differential diagnosis, management
+45	heat exhaustion, management and pathophysiology
+46	complications and management of anorexia and bulimia
+47	aids dementia, workup
+48	infections in renal transplant patients
+49	theophylline uses--chronic and acute asthma
+50	lung cancer, radiation therapy
+51	surgery vs. percutaneous drainage for lung abscess
+52	Catamenorrheal Anaphylaxis
+53	PLASMAPHERESIS AS THERAPEUTIC OPTION for Guillain- Barre syndrome
+54	Urinary Tract Infection, CRITERIA FOR TREATMENT AND ADMISSION
+55	infiltrative small bowel processes, information about small bowel lymphoma and heavy alpha chain disease
+56	iron deficiency anemia, which test is best
+57	scheurmann's disease, treatment
+58	sigmoidoscopy in preventive care, whether the recommended frequency of sigmoidoscopy is effective and sensitive in detecting cancer
+59	how to best control pain and debilitation secondary to osteoporosis in never treated advanced disease
+60	differential diagnosis of breakthrough vaginal bleeding while on estrogen and progesterone therapy
+61	review of anemia of chronic illness
+62	HIV and the GI tract, recent reviews
